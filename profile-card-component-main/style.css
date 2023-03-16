@@ -1,0 +1,135 @@
+:root{
+    --bg-pattern-bottom: url(images/bg-pattern-bottom.svg);
+    --bg-pattern-top: url(images/bg-pattern-top.svg);
+    --bg-pattern-card: url(images/bg-pattern-card.svg);
+    --dark-cyan:hsl(185, 75%, 39%);
+    --very-dark-desaturated-blue: hsl(229, 23%, 23%);
+    --dark-grayish-blue: hsl(227, 10%, 46%);
+    --dark-gray:hsl(0, 0%, 59%);
+    --fz-mobile:1.15rem;
+    --fz-tablet:1.20rem;
+    --fz-desktop:1.25rem;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-size: var(--fz-mobile);
+    background: var(--bg-pattern-top), var(--bg-pattern-bottom), var(--dark-cyan) no-repeat;
+    margin: .8em;
+    padding: .8em;
+    color: var(--very-dark-desaturated-blue);
+}
+
+.card__container{
+    width: 100%;
+    position: relative;
+    background-color: white;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 10px 30px -15px var(--dark-grayish-blue);
+}
+
+.card__pattern{
+    background-image: var(--bg-pattern-card);
+    height: 10em;
+    position: relative;
+    border-radius: 10px  10px 0 0; 
+}
+
+.profile__image__container{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 7em;
+    right: 50%;
+    left: 50%;
+
+
+}
+
+.profile__image{
+    border-radius: 50%;
+    border: .3em solid white;
+}
+
+.profile__details{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.personal__details{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+    padding: 3em 0 .6em 0
+}
+
+.name__container{
+    font-size: .7em;
+}
+
+.age__container{
+    font-size: .6em;
+    color: var(--dark-grayish-blue);
+}
+
+.location__container{
+    font-size: .7em;
+    padding-bottom: 2em;
+    color: var(--dark-grayish-blue);
+}
+
+.profile__page__details{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 1em 0 1em 0;
+    text-align: center;
+}
+
+.profile__page__details h4{
+    font-size: .9em;
+}
+
+.profile__page__details p{
+    font-size: .7em;
+    color: var(--dark-grayish-blue);
+}
+
+@media (min-width: 600px) and (max-width: 915px) {
+    body {
+      font-size: var(--fz-tablet);
+    }
+
+    .card__container{
+        width: 60%;
+    }
+   
+  }
+  
+  @media (min-width: 920px) {
+    body{
+        font-size: var(--fz-desktop);
+    }
+
+    .card__container{
+        width: 30%;
+    }
+  }
+  
